@@ -1,0 +1,49 @@
+{
+	"name": "rollup-plugin-aggregate-exports",
+	"version": "0.0.0-semantic-release",
+	"description": "Emit an entry file to aggregate exports across multiple files",
+	"keywords": [
+		"rollup",
+		"plugin",
+		"aggregate",
+		"exports",
+		"entry point"
+	],
+	"license": "MIT",
+	"repository": "privatenumber/rollup-plugin-aggregate-exports",
+	"funding": "https://github.com/privatenumber/rollup-plugin-aggregate-exports?sponsor=1",
+	"author": {
+		"name": "Hiroki Osame",
+		"email": "hiroki.osame@gmail.com"
+	},
+	"files": [
+		"lib"
+	],
+	"main": "lib/rollup-plugin-aggregate-exports.js",
+	"scripts": {
+		"lint": "eslint .",
+		"test": "jest"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint",
+			"jest --bail --findRelatedTests"
+		]
+	},
+	"devDependencies": {
+		"@pvtnbr/eslint-config-base": "^0.1.1",
+		"eslint": "^7.16.0",
+		"husky": "^4.3.6",
+		"jest": "^26.6.3",
+		"lint-staged": "^10.5.3",
+		"rollup": "^2.35.1"
+	},
+	"eslintConfig": {
+		"extends": "@pvtnbr/eslint-config-base"
+	}
+}
