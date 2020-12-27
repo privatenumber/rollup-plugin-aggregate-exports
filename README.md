@@ -50,9 +50,20 @@ export default rollupConfig;
 
 ```ts
 interface Export {
-	identifier: string;
-	as?: string;
+	/**
+	 * Path to import from
+	 */
 	from: string;
+
+	/**
+	 * Identifier to imort
+	 */
+	identifier: string;
+
+	/**
+	 * Name to export as
+	 */
+	as?: string;
 }
 
 aggregateExports(options?: {
